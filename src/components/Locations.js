@@ -1,8 +1,13 @@
 import React from "react";
+import Header from "./Header";
 
 class Locations extends React.Component {
   render() {
-    return <div>Hi</div>;
+    return (
+      <div className="locations">
+        <Header title="Locations" />
+      </div>
+    );
   }
 }
 

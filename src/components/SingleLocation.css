@@ -1,0 +1,26 @@
+.location-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.individual-location {
+  width: 25%;
+  background-color: blue;
+}
+
+.individual-location .title {
+  text-align: center;
+  font-family: Thasadith;
+}
+
+.individual-location .operations {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.individual-location .operations img {
+  width: 25%;
+}

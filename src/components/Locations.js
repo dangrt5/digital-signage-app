@@ -9,6 +9,8 @@ class Locations extends React.Component {
         <Header title="Locations" />
         <div className="location-list">
           <SingleLocation title="Irvine, CA" />
+          <SingleLocation title="Kentucky, TN" />
+          <SingleLocation title="Georgia, TN" />
         </div>
       </div>
     );

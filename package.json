@@ -22,5 +22,8 @@
   "homepage": "https://github.com/dangrt5/digital-signage-app#readme",
   "devDependencies": {
     "concurrently": "^4.1.0"
+  },
+  "dependencies": {
+    "redux-thunk": "^2.3.0"
   }
 }

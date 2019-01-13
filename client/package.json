@@ -1,9 +1,10 @@
 {
   "name": "digital-signage-app",
   "version": "0.1.0",
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:3001",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-generator": "^4.16.0",
@@ -15,6 +16,7 @@
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {

@@ -3,11 +3,13 @@ const mysql = require("mysql");
 const { resolve } = require("path");
 const credentials = require("./credentials.js");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 const port = process.env.PORT || 3001;
 
 const app = express();
 
 app.use(cors());
+app.use(bodyParser.json());
 app.use(express.static(resolve(__dirname, "public")));
 app.use(express.json());
 app.use((req, res, next) => {
@@ -28,10 +30,12 @@ con.connect(err => {
   console.log("Connected");
 });
 
-// app.get("/", (req, res) => res.send("Hello World!"));
+app.get("/", (req, res) => res.send("Hello World!"));
 
 app.get("/location/:new", (req, res) => {
-  let sql = `INSERT INTO locations (city, state) VALUES ('${}', '${}')`;
+  let sql = `INSERT INTO locations (city, state) VALUES ('${req.body.city}', '${
+    req.body.state
+  }')`;
   con.query(sql, (err, result) => {
     if (err) throw err;
     console.log("Succcess");

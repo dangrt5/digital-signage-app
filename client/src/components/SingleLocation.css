@@ -1,24 +1,33 @@
 .location-list {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 10em;
 }
 
 .individual-location {
   width: 15rem;
   height: 15rem;
-  background-color: blue;
+  background-color: #ddddde;
 }
 
 .individual-location .title {
   text-align: center;
   font-family: Thasadith;
+  font-size: 42px;
 }
 
 .individual-location .operations {
   width: 50%;
   margin: auto;
+  padding-top: 7%;
 }
 
 .individual-location .operations img {
-  width: 25%;
+  display: block;
+  width: 50%;
+  margin-left: 20px;
+}
+
+.individual-location .operations img:last-of-type {
+  margin-top: 5%;
 }

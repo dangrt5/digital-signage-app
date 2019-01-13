@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import SingleLocation from "./SingleLocation";
+import { connect } from "react-redux";
+import { getLocations } from "../actions/index";
 
 class Locations extends React.Component {
   render() {
@@ -17,4 +19,13 @@ class Locations extends React.Component {
   }
 }
 
-export default Locations;
+function mapStateToProps(state) {
+  return {
+    list: state.list.results
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  { getLocations }
+)(Locations);

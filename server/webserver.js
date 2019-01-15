@@ -35,7 +35,7 @@ con.connect(err => {
 
 //LOCATIONS PAGE
 
-app.get("/locations", (req, res) => {
+app.get("/api/locations", (req, res) => {
   let sql = `SELECT * FROM locations`;
   con.query(sql, (err, result) => {
     if (err) throw err;
@@ -44,7 +44,7 @@ app.get("/locations", (req, res) => {
   });
 });
 
-app.post("/locations/add", (req, res) => {
+app.post("/api/locations/add", (req, res) => {
   let sql = `INSERT INTO locations (city, state) VALUES ('${
     req.body.user.city
   }', '${req.body.user.state}')`;
@@ -57,7 +57,7 @@ app.post("/locations/add", (req, res) => {
 
 // ROOMS PAGE
 
-app.get("/rooms/:id", (req, res) => {
+app.get("/api/rooms/:id", (req, res) => {
   let sql = `SELECT * FROM rooms WHERE locationID = '${req.params.id}'`;
   con.query(sql),
     (err, result) => {

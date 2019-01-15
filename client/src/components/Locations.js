@@ -5,7 +5,12 @@ import { connect } from "react-redux";
 import { getLocations } from "../actions/index";
 
 class Locations extends React.Component {
+  componentDidMount() {
+    console.log("props", this.props);
+  }
+
   render() {
+    console.log("props before mounting", this.props);
     return (
       <div className="locations">
         <Header title="Locations" />
@@ -21,7 +26,7 @@ class Locations extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    list: state.list.results
+    results: state.list.results
   };
 }
 

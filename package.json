@@ -23,7 +23,5 @@
   "devDependencies": {
     "concurrently": "^4.1.0"
   },
-  "dependencies": {
-    "redux-thunk": "^2.3.0"
-  }
+  "dependencies": {}
 }
